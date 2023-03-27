@@ -9,7 +9,7 @@ urlpatterns = [
     path('create',createListing, name="listing-create"),
     path('upload',uploadImage, name="image-upload"),
 
-    path('top',getTopListings, name='top-listings'),
+
     path('admin',getAdminListings, name='admin-listings'),
     path('<str:pk>',getListing, name="listing"),
     path('category/<str:pk>',getListingsByCategory, name="listings-category"),
