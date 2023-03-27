@@ -45,7 +45,7 @@ def getListingsByCategory(request, pk):
 
 @api_view(['GET'])
 def getTopListings(request):
-    listings = Listing.objects.filter(rating__gte=4).order_by('-rating')[0:5]
+    listings = Listing.objects.filter(rating__gte=4).order_by('-rating')[0:7]
     serializer = ListingSerializer(listings, many=True)
     return Response(serializer.data)
 
